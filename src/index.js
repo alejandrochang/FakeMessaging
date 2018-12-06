@@ -1,23 +1,53 @@
-// Import the React and ReactDOMs libraries
-// Create a React Component
-// Take the React Component and show it on the screen
-
-import React from "react";
-import ReactDOM from "react-dom";
-
-// function based component
+import React from 'react';
+import ReactDOM from 'react-dom';
+import faker from 'faker';
 
 const App = () => {
-    const buttonText = { text: 'Click on Me!' };
-    const style = { backgroundColor: 'blue', color: 'white' };
 
-    return (
-        <div>
-            <label className="label" htmlFor="name">Enter name: </label>
-            <input id="name" type="text"/>
-            <button style={style}> { buttonText.text } </button>
+	return <div className="ui container comments">
+      <div className="comment">
+        <a href="/" className="avatar">
+          <img alt="avatar" src={faker.image.avatar()}/>
+        </a>
+        <div className="content">
+          <a href="/" className="author">
+            Sam
+          </a>
+					<div className="meta-data">
+						<span className="date"> Today at 6:00PM</span>
+					</div>
+					<div className="text">Nice blogpost!</div>
         </div>
-    );
-};
+      </div>
+			<div className="comment">
+				<a href="/" className="avatar">
+					<img alt="avatar" src={faker.image.avatar()} />
+				</a>
+				<div className="content">
+					<a href="/" className="author">
+						Sam
+						</a>
+					<div className="meta-data">
+						<span className="date"> Today at 6:00PM</span>
+					</div>
+					<div className="text">Nice blogpost!</div>
+				</div>
+			</div>
+			<div className="comment">
+				<a href="/" className="avatar">
+					<img alt="avatar" src={faker.image.avatar()} />
+				</a>
+				<div className="content">
+					<a href="/" className="author">
+						Sam
+						</a>
+					<div className="meta-data">
+						<span className="date"> Today at 6:00PM</span>
+					</div>
+					<div className="text">Nice blogpost!</div>
+				</div>
+			</div>
+    </div>;
+}
 
-ReactDOM.render(<App />, document.querySelector("#root"));
+ReactDOM.render(<App />, document.querySelector('#root'));
